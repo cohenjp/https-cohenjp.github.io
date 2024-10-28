@@ -1,0 +1,16 @@
+const adjectives = [
+    "Wild", "Electric", "Funky", "Cool", "Mystic", "Groovy", "Cosmic", 
+    "Lost", "Savage", "Epic", "Daring", "Vibrant", "Ancient"
+];
+
+const nouns = [
+    "Lions", "Whispers", "Dancers", "Echoes", "Dreamers", "Kings", 
+    "Shadows", "Warriors", "Ghosts", "Jesters", "Chameleons", "Monkeys"
+];
+
+document.getElementById('generate-button').addEventListener('click', () => {
+    const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+    const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+    const bandName = `${randomAdjective} ${randomNoun}`;
+    document.getElementById('band-name').innerText = bandName;
+});
